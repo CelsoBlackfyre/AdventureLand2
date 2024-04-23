@@ -214,3 +214,10 @@ video {
 .modal-body {
 	object-fit: contain;
 }
+
+.carousel-image {
+	height: 100vh;
+	background-image: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
