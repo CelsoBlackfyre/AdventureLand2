@@ -41,17 +41,18 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item active">
-							<a class="nav-link" href="#"
-								>Home <span class="sr-only">(current)</span></a
-							>
+							<a class="nav-link" href="index.html">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Loja</a>
+							<a class="nav-link" href="loja.html">Loja</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="alimentacao.html">Alimentação</a>
 						</li>
-						<li class="nav-item dropdown">
+						<li class="nav-item">
+							<a class="nav-link" href="sobre.html">Sobre</a>
+						</li>
+						<li class="nav-item active dropdown">
 							<a
 								class="nav-link dropdown-toggle"
 								href="#"
@@ -64,164 +65,171 @@
 							</a>
 							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 								<a class="dropdown-item" href="conta.html">Login</a>
-								<a class="dropdown-item" href="#">Criar Conta</a>
-								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="#">Something else here</a>
+								<a class="dropdown-item" href="conta.html">Criar Conta</a>
 							</div>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link disabled" href="#">Planos</a>
 						</li>
 					</ul>
-					<form class="form-inline my-2 my-lg-0">
-						<input
-							class="form-control mr-sm-2"
-							type="search"
-							placeholder="O que deseja procuar ?"
-							aria-label="Buscar" />
-						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-							Buscar
-						</button>
-					</form>
 				</div>
 			</nav>
 		</header>
-		<!--Area de Criar Conta-->
 
-		<div class="container-criar-conta">
-			<h1>Criar Conta</h1>
-			<h2>登録する</h2>
-			<form>
-				<div class="form-group">
-					<label for="fullName">Nome Completo</label>
-					<input
-						type="text"
-						class="form-control"
-						name="fullName"
-						id="fullName" />
+		<div class="container-contas">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="container-criar-conta">
+						<h1>Criar Conta</h1>
+						<h2>登録する</h2>
+						<form>
+							<div class="form-group">
+								<label for="fullName">Nome Completo</label>
+								<input
+									type="text"
+									class="form-control"
+									name="fullName"
+									id="fullName" />
+							</div>
+
+							<div class="form-group">
+								<label for="idade">Idade</label>
+								<input
+									type="number"
+									class="form-control"
+									id="idade"
+									name="idade"
+									min="18"
+									max="120"
+									required />
+							</div>
+
+							<label for="sexo" class="form-label">Sexo:</label>
+							<div class="form-check">
+								<input
+									class="form-check-input"
+									type="radio"
+									id="sexo"
+									name="sexo"
+									value="masculino" />
+								<label for="masculino" class="form-check-label"
+									>Masculino</label
+								>
+							</div>
+							<div class="form-check">
+								<input
+									class="form-check-input"
+									type="radio"
+									id="sexo"
+									name="sexo"
+									value="feminino" />
+								<label for="feminino" class="form-check-label">Feminino</label>
+							</div>
+							<div class="form-check">
+								<input
+									class="form-check-input"
+									type="radio"
+									id="sexo"
+									name="sexo"
+									value="outro" />
+								<label for="outro" class="form-check-label">Outro</label>
+							</div>
+
+							<div class="form-group">
+								<label for="endereco">Endereco</label>
+								<input
+									type="text"
+									name="endereco"
+									class="form-control"
+									id="endereco"
+									required
+									placeholder="Digite seu endereco" />
+							</div>
+
+							<div class="form-group">
+								<label for="telefone">Telefone</label>
+								<input
+									type="tel"
+									id="telefone"
+									name="telefone"
+									pattern="[0-9]{10}"
+									required />
+							</div>
+
+							<div class="form-group">
+								<label for="email">Email</label>
+								<input
+									type="email"
+									class="form-control"
+									id="email"
+									name="email" />
+							</div>
+
+							<div class="form-group">
+								<label for="username">Nome de Usuário</label>
+								<input
+									type="text"
+									class="form-control"
+									id="username"
+									name="username" />
+							</div>
+
+							<div class="form-group">
+								<label for="password">Senha</label>
+								<input
+									type="password"
+									class="form-control"
+									id="password"
+									name="password"
+									required
+									minlength="8" />
+							</div>
+
+							<div class="form-group">
+								<label for="confirmPassword">Confirme sua senha</label>
+								<input
+									type="password"
+									class="form-control"
+									id="confirmPassword"
+									name="confirmPassword"
+									required
+									minlength="8" />
+							</div>
+
+							<button type="submit" class="btn btn-dark">Criar conta</button>
+						</form>
+					</div>
 				</div>
-
-				<div class="form-group">
-					<label for="idade">Idade</label>
-					<input
-						type="number"
-						class="form-control"
-						id="idade"
-						name="idade"
-						min="18"
-						max="120"
-						required />
+				<div class="col-md-6">
+					<div class="container-login">
+						<h1>Fazer Login</h1>
+						<h2>ログイン</h2>
+						<form>
+							<div class="form-group">
+								<label for="username">Nome de Usuário</label>
+								<input
+									type="text"
+									class="form-control"
+									id="username"
+									name="username"
+									required />
+							</div>
+							<div class="form-group">
+								<label for="password">Senha</label>
+								<input
+									type="password"
+									class="form-control"
+									id="password"
+									name="password"
+									required />
+							</div>
+							<button type="submit" class="btn btn-dark">Logar</button>
+						</form>
+					</div>
 				</div>
-
-				<div class="form-group">
-					<label for="sexo" class="form-label">Sexo:</label>
-					<input
-						class="form-control"
-						type="radio"
-						id="sexo"
-						name="sexo"
-						value="masculino" />
-					<label for="masculino">Masculino</label>
-					<input
-						class="form-control"
-						type="radio"
-						id="sexo"
-						name="sexo"
-						value="feminino" />
-					<label for="feminino">Feminino</label>
-					<input
-						class="form-control"
-						type="radio"
-						id="sexo"
-						name="sexo"
-						value="outro" />
-					<label for="outro">Outro</label>
-				</div>
-
-				<div class="form-group">
-					<label for="endereco">Endereco</label>
-					<input
-						type="text"
-						name="endereco"
-						class="form-control"
-						id="endereco"
-						required
-						placeholder="Digite seu endereco" />
-				</div>
-
-				<div class="form-group">
-					<label for="telefone">Telefone</label>
-					<input
-						type="tel"
-						id="telefone"
-						name="telefone"
-						pattern="[0-9]{10}"
-						required />
-				</div>
-
-				<div class="form-group">
-					<label for="email">Email</label>
-					<input type="email" class="form-control" id="email" name="email" />
-				</div>
-
-				<div class="form-group">
-					<label for="username">Nome de Usuário</label>
-					<input
-						type="text"
-						class="form-control"
-						id="username"
-						name="username" />
-				</div>
-
-				<div class="form-group">
-					<label for="password">Senha</label>
-					<input
-						type="password"
-						class="form-control"
-						id="password"
-						name="password"
-						required
-						minlength="8" />
-				</div>
-
-				<div class="form-group">
-					<label for="confirmPassword">Confirme sua senha</label>
-					<input
-						type="password"
-						class="form-control"
-						id="confirmPassword"
-						name="confirmPassword"
-						required
-						minlength="8" />
-				</div>
-
-				<button type="submit" class="btn btn-dark">Criar conta</button>
-			</form>
+			</div>
 		</div>
 
-		<div class="container-login">
-			<form>
-				<div class="form-group">
-					<label for="username">Nome de Usuário</label>
-					<input
-						type="text"
-						class="form-control"
-						id="username"
-						name="username"
-						required />
-				</div>
-				<div class="form-group">
-					<label for="password">Senha</label>
-					<input
-						type="password"
-						class="form-control"
-						id="password"
-						name="password"
-						required />
-				</div>
-				<button type="submit" class="btn btn-dark">Logar</button>
-			</form>
-		</div>
 		<footer class="rodape-do-site py-5 mt-5">
 			<div class="container text-light text-center">
 				<p class="display-5 mb-3">Adventure Land</p>

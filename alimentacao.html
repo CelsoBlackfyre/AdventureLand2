@@ -36,16 +36,17 @@
 
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto">
-						<li class="nav-item active">
+						<li class="nav-item">
 							<a class="nav-link" href="index.html">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="loja.html"
-								>Loja <span class="sr-only">(current)</span></a
-							>
+							<a class="nav-link" href="loja.html">Loja</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="alimentacao.html">Alimentação</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="alimentacao.html">Alimentação</a>
+							<a class="nav-link" href="sobre.html">Sobre</a>
 						</li>
 						<li class="nav-item dropdown">
 							<a
@@ -69,16 +70,6 @@
 							<a class="nav-link disabled" href="#">Planos</a>
 						</li>
 					</ul>
-					<form class="form-inline my-2 my-lg-0">
-						<input
-							class="form-control mr-sm-2"
-							type="search"
-							placeholder="O que deseja procuar ?"
-							aria-label="Buscar" />
-						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-							Buscar
-						</button>
-					</form>
 				</div>
 			</nav>
 		</header>
@@ -96,10 +87,57 @@
 							<p class="card-text">
 								Venha conhecer as melhores bebidas de origens japonesas.
 							</p>
-							<a href="#" class="btn btn-dark">Comprar talvez</a>
+							<!-- Modal -->
+							<div
+								class="modal fade"
+								id="staticBackdrop"
+								data-bs-backdrop="static"
+								data-bs-keyboard="false"
+								tabindex="-1"
+								aria-labelledby="staticBackdropLabel"
+								aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h1 class="modal-title fs-5" id="staticBackdropLabel">
+												Bebidas
+											</h1>
+											<button
+												type="button"
+												class="btn-close"
+												data-bs-dismiss="modal"
+												aria-label="Close"></button>
+										</div>
+										<div class="modal-body">
+											<div class="modal-imagem">
+												<img src="imgs/00004-3055598332.png" alt="" />
+												<div class="modal-texto">
+													<p>Bebidas Japonesas do Japão para o mundo.</p>
+												</div>
+											</div>
+										</div>
+										<div class="modal-footer">
+											<button
+												type="button"
+												class="btn btn-secondary"
+												data-bs-dismiss="modal">
+												Close
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<button
+								type="button"
+								class="btn btn-dark"
+								data-toggle="modal"
+								data-target="#staticBackdrop">
+								Conheça
+							</button>
 						</div>
 					</div>
 				</div>
+
 				<div class="bebida col-md-4">
 					<div class="bebidas card">
 						<video autoplay loop muted src="video/japanesefood.mp4"></video>

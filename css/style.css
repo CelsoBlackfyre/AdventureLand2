@@ -96,10 +96,11 @@ body {
 	max-width: 500px;
 	width: 70%;
 	padding: 20px;
-	position: absolute;
+	border-radius: 10px;
+	/* position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%); */
 }
 
 .container-criar-conta input {
@@ -107,10 +108,18 @@ body {
 }
 
 .container-criar-conta h1 {
-	margin-top: 100px;
+	margin-top: 70px;
 }
 
 .container-criar-conta h2 {
+	margin-bottom: 50px;
+}
+
+.container-login h1 {
+	margin-top: 70px;
+}
+
+.container-login h2 {
 	margin-bottom: 50px;
 }
 
@@ -122,10 +131,11 @@ body {
 	max-width: 500px;
 	width: 70%;
 	padding: 20px;
-	position: absolute;
+	border-radius: 10px;
+	/* position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%); */
 }
 
 .container-loja {
@@ -199,4 +209,8 @@ body {
 
 video {
 	border: 5px solid #191919;
+}
+
+.modal-body {
+	object-fit: contain;
 }
