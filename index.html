@@ -213,51 +213,55 @@
 
 		<div class="container-atracoes">
 			<div class="row">
-				<button
-					type="button"
-					class="btn btn-dark"
-					data-toggle="modal"
-					data-target="#exampleModal">
-					Conheça
-				</button>
 				<div class="col-md-4">
+					<!-- Botao do modal -->
+					<button
+						type="button"
+						class="btn btn-dark"
+						data-bs-toggle="modal"
+						data-bs-target="#exampleModal">
+						Confira
+					</button>
+					<img
+						src="imgs/park.png"
+						data-bs-toggle="modal"
+						data-bs-target="#exampleModal"
+						alt="" />
+					<!-- Modal -->
 					<div
 						class="modal fade"
 						id="exampleModal"
 						tabindex="-1"
-						role="dialog"
+						aria-labelledby="exampleModalLabel"
 						aria-hidden="true">
-						<div
-							class="modal-dialog-scrollable"
-							style="max-width: 1200px"
-							role="dialog">
+						<div class="modal-dialog" style="max-width: 1200px">
 							<div class="modal-content">
 								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										Bebidas Japonesas
+									</h1>
 									<button
 										type="button"
-										class="close"
-										data-dismiss="modal"
-										aria-label="Close">
-										<span aria-hidden="true">×</span>
-									</button>
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"></button>
 								</div>
-								<div class="modal-body">
-									<img src="imgs/parque1.png" alt="" />
+								<div class="modal-body bg-dark">
+									<img src="imgs/00004-3055598332.png" height="500px" alt="" />
 									<div class="modal-descricao">
-										<h4>Roda Gigante / 観覧車</h4>
-										<p>
-											Venha conhecer a roda gigante mais divertida e a única com
-											temática Japonesa.
+										<p class="bg-dark">
+											Venha conhecer nossas barracas de bebidas com temáticas
+											japonesas
 										</p>
 									</div>
-									<div class="modal-footer">
-										<button
-											type="button"
-											class="btn btn-secondary"
-											data-dismiss="modal">
-											Fechar
-										</button>
-									</div>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal">
+										Fechar
+									</button>
 								</div>
 							</div>
 						</div>
