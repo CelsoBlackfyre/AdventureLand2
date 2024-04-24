@@ -255,3 +255,18 @@ video {
 	text-align: center;
 	max-width: 200px;
 }
+
+.container-escolha {
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+.botao-criar-conta {
+	margin-top: 20px;
+	text-align: center;
+}
+
+.criar-conta-btn {
+	text-align: center;
+}

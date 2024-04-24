@@ -21,7 +21,7 @@
 			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 			crossorigin="anonymous" />
 	</head>
-	<body>
+	<body style="background-image: url(imgs/00002-1413501352.png)">
 		<header>
 			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 				<a class="navbar-brand" href="#"
@@ -63,17 +63,11 @@
 			</nav>
 		</header>
 
-		<div class="container-escolha">
-			<div class="row">
-				<h4>Como proceder</h4>
-				<div class="col-md-4">
-					<button onclick="alternarFormulario()" class="bg-dark">Teste</button>
-				</div>
-			</div>
-		</div>
-
 		<div class="container-contas">
 			<div class="row">
+				<div class="col-md-4">
+					<img src="imgs/" alt="" />
+				</div>
 				<div class="col-md-4">
 					<div
 						class="container-criar-conta"
@@ -145,6 +139,8 @@
 									placeholder="Digite seu endereco" />
 							</div>
 
+							<hr class="my-2 invisible" />
+
 							<div class="form-group">
 								<label for="telefone">Telefone</label>
 								<input
@@ -196,11 +192,15 @@
 							</div>
 
 							<button type="submit" class="btn btn-dark">Criar conta</button>
+							<hr class="my-4" />
+							<button onclick="alternarFormulario()" class="btn btn-dark">
+								Ja tenho uma conta
+							</button>
 						</form>
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="container-login" id="login" style="display: none">
+					<div class="container-login" id="login">
 						<h1>Fazer Login</h1>
 						<h2>ログイン</h2>
 						<form>
@@ -223,6 +223,10 @@
 									required />
 							</div>
 							<button type="submit" class="btn btn-dark">Logar</button>
+							<hr class="my-4" />
+							<button onclick="alternarFormulario()" class="btn btn-dark">
+								Crir nova conta
+							</button>
 						</form>
 					</div>
 				</div>
