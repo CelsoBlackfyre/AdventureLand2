@@ -23,8 +23,8 @@
 	<body>
 		<header>
 			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-				<a class="navbar-brand" href="#"
-					>Adventure Land / アドベンチャーランド
+				<a class="navbar-brand" href="index.html"
+					>Adventure Land アドベンチャーランド
 				</a>
 				<button
 					class="navbar-toggler"
@@ -40,9 +40,7 @@
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav mr-auto">
 						<li class="nav-item active">
-							<a class="nav-link" href="#"
-								>Home <span class="sr-only">(current)</span></a
-							>
+							<a class="nav-link" href="#">Home</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="loja.html">Loja</a>
@@ -167,7 +165,7 @@
 			</a>
 		</div> -->
 
-		<div
+		<!-- <div
 			id="carouselExampleIndicators"
 			class="carousel slide"
 			data-ride="carousel">
@@ -209,24 +207,96 @@
 					class="active"></li>
 				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 			</ol>
+		</div> -->
+
+		<div
+			id="carouselExampleCaptions"
+			class="carousel slide"
+			data-bs-ride="carousel">
+			<div class="carousel-indicators">
+				<button
+					type="button"
+					data-bs-target="#carouselExampleCaptions"
+					data-bs-slide-to="0"
+					class="active"
+					aria-current="true"
+					aria-label="Slide 1"></button>
+				<button
+					type="button"
+					data-bs-target="#carouselExampleCaptions"
+					data-bs-slide-to="1"
+					aria-label="Slide 2"></button>
+				<button
+					type="button"
+					data-bs-target="#carouselExampleCaptions"
+					data-bs-slide-to="2"
+					aria-label="Slide 3"></button>
+			</div>
+			<div class="carousel-inner">
+				<div class="carousel-item carousel-image bg-img-1 active">
+					<img src="imgs/parque1.png" class="d-block w-100" alt="..." />
+					<div class="carousel-caption d-none d-md-block">
+						<h5>Para Toda Familia</h5>
+						<p>
+							Traga sua familia para conhecer o maior parque temático do país,
+							diversao para todas as idades.
+						</p>
+					</div>
+				</div>
+				<div class="carousel-item carousel-image bg-img-2">
+					<img src="imgs/parque2.png" class="d-block w-100" alt="..." />
+					<div class="carousel-caption d-none d-md-block">
+						<h5>Outro Mundo</h5>
+						<p>
+							Fique imerso na cultura japonesa, conheça seus costumes e embarque
+							nessa aventura incrivel.
+						</p>
+					</div>
+				</div>
+				<div class="carousel-item carousel-image bg-img-3">
+					<img src="imgs/parque3.png" class="d-block w-100" alt="..." />
+					<div class="carousel-caption d-none d-md-block">
+						<h5>Lembranças Inesqueciveis</h5>
+						<p>
+							Leve contigo de volta para casa lembranças, guarde registros e
+							traga souvenirs do parque.
+						</p>
+					</div>
+				</div>
+			</div>
+			<button
+				class="carousel-control-prev"
+				type="button"
+				data-bs-target="#carouselExampleCaptions"
+				data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Anterior</span>
+			</button>
+			<button
+				class="carousel-control-next"
+				type="button"
+				data-bs-target="#carouselExampleCaptions"
+				data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Próximo</span>
+			</button>
 		</div>
 
+		<div class="titulo-atracoes">
+			<h2>Atracoes do Parque</h2>
+			<h3>公園のアトラクション</h3>
+		</div>
 		<div class="container-atracoes">
-			<div class="row">
-				<div class="col-md-4">
+			<div class="row mx-0">
+				<div class="col">
 					<!-- Botao do modal -->
-					<button
-						type="button"
-						class="btn btn-dark"
-						data-bs-toggle="modal"
-						data-bs-target="#exampleModal">
-						Confira
-					</button>
+					<h2 class="display-6">Roda Gigante</h2>
 					<img
-						src="imgs/park.png"
+						src="imgs/ferriswheelia2.png"
 						data-bs-toggle="modal"
 						data-bs-target="#exampleModal"
-						alt="" />
+						alt=""
+						class="w-100 shadow-1-strong rounded mb-4" />
 					<!-- Modal -->
 					<div
 						class="modal fade"
@@ -238,7 +308,7 @@
 							<div class="modal-content">
 								<div class="modal-header">
 									<h1 class="modal-title fs-5" id="exampleModalLabel">
-										Bebidas Japonesas
+										Roda Gigante 観覧車
 									</h1>
 									<button
 										type="button"
@@ -247,12 +317,216 @@
 										aria-label="Close"></button>
 								</div>
 								<div class="modal-body bg-dark">
-									<img src="imgs/00004-3055598332.png" height="500px" alt="" />
+									<img src="imgs/ferriswheelia2.png" height="500px" alt="" />
 									<div class="modal-descricao">
-										<p class="bg-dark">
-											Venha conhecer nossas barracas de bebidas com temáticas
-											japonesas
-										</p>
+										<div class="atracoes-card-esquerda">
+											<h3 class="atracoes-titulo">Roda Gigante</h3>
+											<h4 class="atracoes-subtitulo">観覧車</h4>
+											<p class="atracoes-descricao">
+												Brinquedo tradicional, uma das atrações mais procuradas
+												do parque. Sendo uma atração clássica, ela pode ser
+												visitada em todos os dias e também serve para todas as
+												idades.
+											</p>
+											<p class="intensidade">Intensidade:<br />Media</p>
+											<p class="atracoes-preco">Preço:<br />R$ 50,00</p>
+											<p class="altura-minima">
+												Altura mínima:<br />1.16 m<br />60 cm (Acompanhado)
+											</p>
+											<button class="atracoes-botao btn btn-danger">
+												Comprar
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal">
+										Fechar
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<!-- Botao do modal -->
+					<h2 class="display-6">Carrossel</h2>
+					<img
+						src="imgs/00016-3779668610.png "
+						data-bs-toggle="modal"
+						data-bs-target="#exampleModal2"
+						alt=""
+						class="w-100 shadow-1-strong rounded mb-4" />
+					<!-- Modal -->
+					<div
+						class="modal fade"
+						id="exampleModal2"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog" style="max-width: 1200px">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										Carrossel テーマパークのカルーセル
+									</h1>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body bg-dark">
+									<img src="imgs/00016-3779668610.png" height="500px" alt="" />
+									<div class="modal-descricao">
+										<div class="atracoes-card-esquerda">
+											<h3 class="atracoes-titulo">Carrossel</h3>
+											<h4 class="atracoes-subtitulo">
+												テーマパークのカルーセル
+											</h4>
+											<p class="atracoes-descricao">
+												Brinquedo tradicional, uma das atrações mais procuradas
+												do parque. Sendo uma atração clássica, ela pode ser
+												visitada em todos os dias e também serve para todas as
+												idades.
+											</p>
+											<p class="intensidade">Intensidade:<br />Baixa</p>
+											<p class="atracoes-preco">Preço:<br />R$ 30,00</p>
+											<p class="altura-minima">
+												Altura mínima:<br />1.20 m<br />80 cm (Acompanhado)
+											</p>
+											<button class="atracoes-botao btn btn-danger">
+												Comprar
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal">
+										Fechar
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<!-- Botao do modal -->
+					<h2 class="display-6">Montanha-Russa</h2>
+					<img
+						src="imgs/00009-4154613205.png "
+						data-bs-toggle="modal"
+						data-bs-target="#exampleModal3"
+						alt=""
+						class="w-100 shadow-1-strong rounded mb-4" />
+					<!-- Modal -->
+					<div
+						class="modal fade"
+						id="exampleModal3"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog" style="max-width: 1200px">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										Montanha-Russa 世界で最も楽しいジェットコースターs
+									</h1>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body bg-dark">
+									<img src="imgs/00009-4154613205.png" height="500px" alt="" />
+									<div class="modal-descricao">
+										<div class="atracoes-card-esquerda">
+											<h3 class="atracoes-titulo">Montanha-Russa</h3>
+											<h4 class="atracoes-subtitulo">
+												世界で最も楽しいジェットコースターs
+											</h4>
+											<p class="atracoes-descricao">
+												Atração essencial para quem busca adrenalina e uma está
+												querendo uma experiência única.
+											</p>
+											<p class="intensidade">Intensidade:<br />Alta</p>
+											<p class="atracoes-preco">Preço:<br />R$ 120,00</p>
+											<p class="altura-minima">Altura mínima:<br />1.38 m</p>
+											<button class="atracoes-botao btn btn-danger">
+												Comprar
+											</button>
+										</div>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button
+										type="button"
+										class="btn btn-secondary"
+										data-bs-dismiss="modal">
+										Fechar
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<!-- Botao do modal -->
+					<h2 class="display-6">Tobogan</h2>
+					<img
+						src="imgs/00010-3519467054.png "
+						data-bs-toggle="modal"
+						data-bs-target="#exampleModal4"
+						alt=""
+						class="w-100 shadow-1-strong rounded mb-4" />
+					<!-- Modal -->
+					<div
+						class="modal fade"
+						id="exampleModal4"
+						tabindex="-1"
+						aria-labelledby="exampleModalLabel"
+						aria-hidden="true">
+						<div class="modal-dialog" style="max-width: 1200px">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h1 class="modal-title fs-5" id="exampleModalLabel">
+										Tobogan テーマパークのトボガン
+									</h1>
+									<button
+										type="button"
+										class="btn-close"
+										data-bs-dismiss="modal"
+										aria-label="Close"></button>
+								</div>
+								<div class="modal-body bg-dark">
+									<img src="imgs/00010-3519467054.png" height="500px" alt="" />
+									<div class="modal-descricao">
+										<div class="atracoes-card-esquerda">
+											<h3 class="atracoes-titulo">Tobogan</h3>
+											<h4 class="atracoes-subtitulo">
+												テーマパークのトボガン
+											</h4>
+											<p class="atracoes-descricao">
+												Brinquedo indicado pra quem gosta de uma experiência
+												mais refrescante e espera algo com menos adrenalina.
+											</p>
+											<p class="intensidade">Intensidade:<br />Baixa</p>
+											<p class="atracoes-preco">Preço:<br />R$ 30,00</p>
+											<p class="altura-minima">
+												Altura mínima:<br />1.06 m <br />
+												90cm (Acompanhado)
+											</p>
+											<button class="atracoes-botao btn btn-danger">
+												Comprar
+											</button>
+										</div>
 									</div>
 								</div>
 								<div class="modal-footer">
@@ -272,7 +546,7 @@
 		<div class="container-imagens">
 			<h1>Galeria de Imagens</h1>
 			<h2>画像</h2>
-			<div class="row">
+			<div class="row mx-0">
 				<div class="col-md-4">
 					<img
 						src="imgs/park.png"
@@ -313,7 +587,7 @@
 		</div>
 
 		<div class="container-cards">
-			<div class="card-group">
+			<div class="card-group mx-0">
 				<div class="card card-teste">
 					<img
 						class="card-img-top"
@@ -357,7 +631,7 @@
 		</div>
 
 		<section class="opinioes-do-site">
-			<div class="row d-flex justify-content-center">
+			<div class="row mx-0 d-flex justify-content-center">
 				<div class="col-md-10 col-xl-8 text-center">
 					<h3 class="mb-4">Avaliações dos Visitantes</h3>
 					<p class="mb-4 pb-2 mb-md-5 pb-md-0">
@@ -367,7 +641,7 @@
 				</div>
 			</div>
 
-			<div class="row text-center">
+			<div class="row text-center mx-0">
 				<div class="col-md-4 mb-5 mb-md-0">
 					<div class="d-flex justify-content-center mb-4">
 						<img

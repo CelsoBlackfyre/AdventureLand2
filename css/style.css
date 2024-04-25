@@ -246,14 +246,14 @@ video {
 .carousel-image {
 	height: 100vh;
 	background-image: no-repeat;
-	background-size: cover;
+	background-size: contain;
 	background-position: center;
 }
 
 .container-atracoes {
 	margin-top: 20px;
 	text-align: center;
-	max-width: 200px;
+	color: #fff;
 }
 
 .container-escolha {
@@ -269,4 +269,33 @@ video {
 
 .criar-conta-btn {
 	text-align: center;
+}
+
+#body-conta {
+	background-image: url("imgs/undraw_japan_ubgk.png");
+	background-repeat: no-repeat;
+}
+
+.container-atracoes img {
+	border: 5px solid #191919;
+	border-radius: 10px;
+}
+
+.container-atracoes img:hover {
+	transform: translateY(-10px);
+}
+
+.modal-descricao {
+	color: #fff;
+}
+
+.titulo-atracoes {
+	text-align: center;
+	color: #fff;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+.corpo {
+	background-image: url(imgs/sakurahouse.jpg);
 }
