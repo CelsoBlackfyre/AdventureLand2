@@ -216,10 +216,15 @@ body {
 .container-alimentacao {
 	text-align: center;
 	color: #fff;
-	margin-top: 50px;
+	margin-top: 70px;
 }
+
 .container-alimentacao h1 {
 	font-size: 40px;
+}
+
+.container-alimentacao h2 {
+	margin-bottom: 50px;
 }
 
 video {
@@ -313,4 +318,10 @@ video {
 }
 
 .carousel-caption p {
+}
+
+.imagem-bebida img {
+	border-radius: 10px;
+	margin-top: 50px;
+	border: #191919 5px solid;
 }
