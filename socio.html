@@ -3,11 +3,14 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Sobre Adventure Land</title>
+		<title>Socio</title>
 		<link rel="shortcut icon" href="/imgs/favicon.ico" type="image/x-icon" />
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/bs-brain@2.0.3/components/projects/project-1/assets/css/project-1.css" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap"
 			rel="stylesheet" />
@@ -48,9 +51,9 @@
 							<a class="nav-link" aria-current="page" href="index.html">Home</a>
 							<a class="nav-link" href="loja.html">Loja</a>
 							<a class="nav-link" href="alimentacao.html">Alimentação</a>
-							<a class="nav-link active" href="sobre.html">Sobre</a>
+							<a class="nav-link" href="sobre.html">Sobre</a>
 							<a class="nav-link" href="conta.html">Conta</a>
-							<a class="nav-link" href="socio.html">Socio</a>
+							<a class="nav-link active" href="socio.html">Socio</a>
 							<a class="nav-link disabled" aria-disabled="true">Planos</a>
 						</div>
 					</div>
@@ -62,21 +65,18 @@
 			<div class="container">
 				<div class="row mx-0">
 					<div class="col-md-5">
-						<span class="text-muted text-white-50">私たちの物語</span>
-						<h2 class="display-5 fw-bold">Sobre</h2>
+						<span class="text-muted text-white-50">会員になる</span>
+						<h2 class="display-5 fw-bold">Seja Sócio</h2>
 						<p class="lead text-white">
-							Adventure Land e um parque de diversão com tematica voltada a
-							cultura japonesa. Aqui ira ficar imerso em um mundo completamente
-							novo e entretido de diversas maneiras possiveis.
+							Venha ser sócio do melhor parque temático do país, você poderá
+							contribuir com o nosso crescimento e fazer parte da família
+							Adventure Land!
 						</p>
 					</div>
 					<div class="col-md-6 offset-md-1">
 						<p class="lead text-white">
-							Site foi criado para exercicio de aprendizagem para o curso de
-							Desenvolvimento de Sistemas na materia de Desenvolvimento de
-							Sistemas. A atividade demanda exercer o conhecimento obtido em
-							HTML, CSS e Javascript para criacao de um site de um parque de
-							diversao de acordo com seus gostos.
+							Envie uma mensagem para o nosso time para iniciar o próximo passo
+							para ser parte da equipe.
 						</p>
 						<hr class="my-4 invisible" />
 						<div class="col-md-5">
@@ -96,31 +96,44 @@
 						</div>
 						<hr class="my-4 invisible" />
 						<div class="col-md-5">
-							<h4 class="text-white">Agradecimentos</h4>
-							<p class="text-white">Professor Marcel</p>
-							<p class="text-white">Todos da turma menos alguns</p>
+							<div data-mdb-input-init class="form-outline fs-5 mb-4">
+								<label class="form-label text-white" for="form4Example1"
+									>Nos envie um email ou mande uma mensagem em nosso canal de mensagens.</label
+								>
+							<form>
+								<label class="form-label text-white form-socio" for="form4Example1">Nome</label>
+									<input type="text" id="form4Example1" class="form-control" />
+								</div>
+
+								<div data-mdb-input-init class="form-outline mb-4">
+									<label class="form-label text-white" for="form4Example2"
+										>Endereço de Email</label
+									>
+									<input type="email" id="form4Example2" class="form-control" />
+								</div>
+
+								<div data-mdb-input-init class="form-outline mb-4">
+									<label class="form-label text-white" for="form4Example3"
+										>Mensagem</label
+									>
+									<textarea
+										class="form-control"
+										id="form4Example3"
+										rows="4"></textarea>
+								</div>
+
+								<button
+									type="submit"
+									data-mdb-button-init
+									data-mdb-ripple-init
+									class="btn btn-primary btn-block mb-4">
+									Enviar
+								</button>
+							</form>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-
-		<footer class="rodape-do-site py-5 mt-5">
-			<div class="container text-light text-center">
-				<p class="display-5 mb-3">Adventure Land</p>
-				<p>Desenvolvido por: Celso Blackfyre</p>
-				<p>
-					<a href="https://github.com/CelsoBlackfyre">GitHub: CelsoBlackfyre</a>
-				</p>
-				<small class="text-white-50"
-					>&copy; 2024 Adventure Land. Todos os direitos reservados.</small
-				>
-			</div>
-		</footer>
-
-		<script
-			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-			crossorigin="anonymous"></script>
 	</body>
 </html>

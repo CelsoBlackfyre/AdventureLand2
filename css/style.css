@@ -454,3 +454,7 @@ CSS.g-6,
 	transform: translateY(0);
 	transition: transform 150ms linear 0.2s, opacity 150ms linear 0.2s;
 }
+
+.form-socio {
+	margin-top: 50px;
+}
