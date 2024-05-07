@@ -15,3 +15,15 @@ function alternarFormulario() {
 		pegarLogin.style.display = "block";
 	}
 }
+
+// function adicionarImagem() {
+// 	let img = new Image();
+// 	img.classList("col-md-4");
+// 	img.src = "/imgs/funfaimg.jpg";
+// 	document.getElementById("divimages").appendChild(img);
+// }
+
+//alterar paragrafo
+// function editarParagrafo () {
+// 	document.getElementById("textoExemplo").innerHTML
+// }
