@@ -21,7 +21,7 @@
 			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 			crossorigin="anonymous" />
 	</head>
-	<body style="background-image: url(imgs/sakurahouse.jpg)" id="">
+	<body>
 		<header>
 			<nav
 				class="navbar navbar-expand-lg bg-body-tertiary"
@@ -76,7 +76,7 @@
 						<h2>登録する</h2>
 						<form>
 							<div class="form-group">
-								<label for="fullName">Nome Completo</label>
+								<label for="nomeCompleto">Nome Completo</label>
 								<input
 									type="text"
 									class="form-control"
@@ -141,7 +141,9 @@
 							<hr class="my-2 invisible" />
 
 							<div class="form-group">
-								<label class="form-label" for="telefone">Telefone</label>
+								<label class="form-label telefone" for="telefone"
+									>Telefone</label
+								>
 								<input
 									data-mdb-input-mask-init
 									data-mdb-input-mask="+55 99-9999-9999"
@@ -149,8 +151,10 @@
 									type="text"
 									id="telefone"
 									name="telefone"
-									pattern="[0-9]{10}"
-									required />
+									pattern="[0-9]{11}"
+									title="Invalido"
+									required
+									placeholder="31999999999" />
 							</div>
 
 							<div class="form-group">
@@ -160,19 +164,21 @@
 									class="form-control"
 									id="email"
 									name="email" />
+								<small></small>
 							</div>
 
 							<div class="form-group">
-								<label for="username">Nome de Usuário</label>
+								<label for="nomeUsuario">Nome de Usuário</label>
 								<input
 									type="text"
 									class="form-control"
 									id="username"
 									name="username" />
+								<small></small>
 							</div>
 
 							<div class="form-group">
-								<label for="password">Senha</label>
+								<label for="senha">Senha</label>
 								<input
 									type="password"
 									class="form-control"
@@ -180,10 +186,11 @@
 									name="password"
 									required
 									minlength="8" />
+								<small></small>
 							</div>
 
 							<div class="form-group">
-								<label for="confirmPassword">Confirme sua senha</label>
+								<label for="confirmarSenha">Confirme sua senha</label>
 								<input
 									type="password"
 									class="form-control"
@@ -191,6 +198,7 @@
 									name="confirmPassword"
 									required
 									minlength="8" />
+								<small></small>
 							</div>
 
 							<button type="submit" class="btn btn-dark">Criar conta</button>
