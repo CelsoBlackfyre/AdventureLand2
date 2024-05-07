@@ -22,6 +22,9 @@
 			rel="stylesheet"
 			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 			crossorigin="anonymous" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	</head>
 	<body>
 		<header>
@@ -81,7 +84,25 @@
 			<h2>アドベンチャーランド</h2>
 		</div>
 
-		<div
+		<div class="tilt">
+			<div class="row mx-0">
+				<div class="col-md-4 swiper-slide" data-tilt data-tilt-glare>
+					<img
+						class="imgs/imagetema_upscayl_4x_ultrasharp.png"
+						src=""
+						style="height: 500px"
+						alt="" />
+				</div>
+				<div class="col-md-4 swiper-slide" data-tilt data-tilt-glare>
+					<img src="/imgs/japanesevillage.jpg" style="height: 500px" alt="" />
+				</div>
+				<div class="col-md-4 swiper-slide" data-tilt data-tilt-glare>
+					<img src="/imgs/brinquedo6.png" style="height: 500px" alt="" />
+				</div>
+			</div>
+		</div>
+
+		<!-- <div
 			id="carouselExampleCaptions"
 			class="carousel slide"
 			data-bs-ride="carousel">
@@ -155,7 +176,7 @@
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Próximo</span>
 			</button>
-		</div>
+		</div> -->
 
 		<div class="titulo-atracoes">
 			<h2>Atracoes do Parque</h2>
@@ -899,8 +920,14 @@
 				>
 			</div>
 		</footer>
-
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<!-- Javascript Files: Vendors -->
+		<script src="jquery.js"></script>
+		<!-- Load jQuery first -->
+		<script src="tilt.jquery.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
+		<script src="tilt.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script src="https://unpkg.com/jquery@3.6.1/dist/jquery.min.js"></script>
 		<script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
 		<script src="https://unpkg.com/isotope-packery@2.0.1/packery-mode.pkgd.min.js"></script>
