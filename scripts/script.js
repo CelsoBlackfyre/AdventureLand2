@@ -43,16 +43,17 @@ var swiper = new Swiper(".swipertwo", {
 });
 
 const nomeCompleto = document.querySelector("#nomeCompleto");
-const idade = document.querySelector("#endereco");
+const idade = document.querySelector("#idade");
 const sexo = document.querySelector("#sexo");
-const email = document.querySelector("#email");
+const endereco = document.querySelector("#endereco");
+const email = document.getElementById("#email");
 const nomeUsuario = document.querySelector("#nomeUsuario");
 const senha = document.querySelector("#telefone");
 const confirmarSenha = document.querySelector("#confirmarSenha");
-
+const botao = document.querySelector("#butao");
 const form = document.querySelector("cadastro");
 
-form.addEventListener("criar", function (e) {
+form.addEventListener("criarConta", function (e) {
 	e.preventDefault();
 });
 
@@ -97,7 +98,7 @@ const mostrarSucesso = (input) => {
 	formGroup.classList.add("sucesso");
 
 	const erro = formGroup.querySelector("small");
-	erro.textContent = "";
+	erro.textContent = "TESTE";
 };
 
 const verificarNomeUsuario = () => {
@@ -165,8 +166,9 @@ const verificarConfirmarSenha = () => {
 	return valido;
 };
 
-form.addEventListener("submit", (e) => {
+butao.addEventListener("submit", (e) => {
 	e.preventDefault();
+	alert("teste");
 	let nomeUsuarioValido = verificarNomeUsuario(),
 		emailValido = verificarEmail(),
 		senhaValida = verificarSenha(),
@@ -180,7 +182,7 @@ form.addEventListener("submit", (e) => {
 	}
 });
 
-form.addEventListener("input", (e) => {
+butao.addEventListener("submit", (e) => {
 	switch (e.target.id) {
 		case "nomeCompleto":
 			verificarNomeUsuario();
