@@ -16,6 +16,15 @@ function alternarFormulario() {
 	}
 }
 
+var swiper = new Swiper(".swipertwo", {
+	spaceBetween: 30,
+	loop: true,
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+	},
+});
+
 const form = document.getElementById("form");
 const nomeCompleto = document.getElementById("nomeCompleto");
 const idade = document.getElementById("idade");
