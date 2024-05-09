@@ -21,7 +21,7 @@
 			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 			crossorigin="anonymous" />
 		<!-- <script defer src="/scripts/script.js"></script> -->
-		<script defer src="app.js"></script>
+		<script defer src="/scripts/script.js"></script>
 	</head>
 	<body>
 		<header>
@@ -74,14 +74,15 @@
 						<h1>Criar Conta</h1>
 						<h2>登録する</h2>
 						<div class="erro"></div>
-						<form action="/" method="GET" id="formT">
+						<form action="/" method="GET" id="form">
 							<div class="form-group">
 								<label for="nomeCompleto">Nome Completo</label>
 								<input
 									type="text"
 									class="form-control"
 									name="nomeCompleto"
-									id="nomeCompleto" />
+									id="nomeCompleto"
+									placeholder="Nome Completo" />
 							</div>
 
 							<div class="form-group">
@@ -93,6 +94,7 @@
 									name="idade"
 									min="18"
 									max="120"
+									placeholder="Idade"
 									required />
 							</div>
 
@@ -164,6 +166,7 @@
 									class="form-control"
 									id="email"
 									name="email"
+									placeholder="Email"
 									required />
 								<small></small>
 							</div>
@@ -175,6 +178,7 @@
 									class="form-control"
 									id="nomeUsuario"
 									name="nomeUsuario"
+									placeholder="Nome de Usuário"
 									required />
 								<small></small>
 							</div>
@@ -187,19 +191,16 @@
 									id="senha"
 									name="senha"
 									required
-									minlength="8" />
+									minlength="8"
+									placeholder="Senha" />
 								<small></small>
 							</div>
 
 							<div class="form-group">
-								<label for="confirmarSenha">Confirme sua senha</label>
-								<input
-									type="password"
-									class="form-control"
-									id="confirmarSenha"
-									name="confirmarSenha"
-									required
-									minlength="8" />
+								<label for="senha2">Confirme sua senha</label>
+								<input type="password" class="form-control" id="senha2"
+								name="senha2 required minlength="8" placeholder="Confirme sua
+								senha" />
 								<small></small>
 							</div>
 
@@ -209,6 +210,7 @@
 								Ja tenho uma conta
 							</button>
 						</form>
+						<div class="erro"></div>
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -269,6 +271,6 @@
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 			crossorigin="anonymous"></script>
-		<script src="script.js"></script>
+		<script src="/scripts/script.js"></script>
 	</body>
 </html>
