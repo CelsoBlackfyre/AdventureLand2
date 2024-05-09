@@ -42,159 +42,41 @@ var swiper = new Swiper(".swipertwo", {
 	},
 });
 
-const nomeCompleto = document.querySelector("#nomeCompleto");
-const idade = document.querySelector("#idade");
-const sexo = document.querySelector("#sexo");
-const endereco = document.querySelector("#endereco");
-const email = document.getElementById("#email");
-const nomeUsuario = document.querySelector("#nomeUsuario");
-const senha = document.querySelector("#telefone");
-const confirmarSenha = document.querySelector("#confirmarSenha");
-const botao = document.querySelector("#butao");
-const form = document.querySelector("#cadastro");
+const formT = document.getElementById("formT");
+const mensagensErro = document.getElementById("mensagensErro");
 
-form.addEventListener("submit", function (e) {
+formT.addEventListener("submit", (e) => {
 	e.preventDefault();
+
+	const { nomeCompleto, email, senha } = formT.element;
+
+	mensagensErro.innerHTML = "";
+
+	if (!nomeCompleto.value.trim()) {
+		displayError("Nome ncessario");
+		return;
+	}
+	if (!email.value.trim() || !emailValido(email.value)) {
+		displayError("Email invalido");
+		return;
+	}
+	if (!senha.value.trim() || !senhaFraca(senha.value)) {
+		displayError("A senha precisa ter 8 caracteres");
+	}
+	return
+}
+alert("Registro com sucesso");
+formT.reset();
 });
 
-const obrigatorio = (value) => (value === "" ? "" : true);
+function displayError(message) {
+	error.Messages.innerHTML += <div class = "error>${message}"</div>
+}
 
-const verificarTamanho = (length, min, max) =>
-	length < min || length > max ? false : true;
+function emailValido(email) {
+	return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
 
-const emailValido = (email) => {
-	const em = /^([a-z0-9.]+)@([a-z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})$/;
-	return em.test(email);
-};
-
-const senhaSegura = (password) => {
-	const em = new RegExp(
-		"^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})"
-	);
-	return em.test(password);
-};
-
-const mostrarErro = (input, message) => {
-	const formGroup = input.parentElement;
-	formGroup.classList.remove("sucesso");
-	formGroup.classList.add("erro");
-
-	const erro = formGroup.querySelector("small");
-	erro.textContent = message;
-};
-
-const formGroup = input.parentElement;
-
-formGroup.classList.remove("sucesso");
-formGroup.classList.add("erro");
-
-const erro = formGroup.querySelector("small");
-
-erro.textContent = message;
-
-const mostrarSucesso = (input) => {
-	const formGroup = input.parentElement;
-	formGroup.classList.remove("erro");
-	formGroup.classList.add("sucesso");
-
-	const erro = formGroup.querySelector("small");
-	erro.textContent = "TESTE";
-};
-
-const verificarNomeUsuario = () => {
-	let valido = false;
-	const min = 3,
-		max = 25;
-	const nomeUsuario = nomeUsuario.value.trim();
-
-	if (!obrigatorio(nomeUsuario)) {
-		mostrarErro(nomeUsuario, "O nome de usuário é obrigatório");
-	} else if (!verificarTamanho(nomeUsuario.length, min, max)) {
-		mostrarErro(
-			nomeUsuarioEl,
-			`O nome de usuário deve ter entre ${min} e ${max} caracteres`
-		);
-	} else {
-		mostrarSucesso(nomeUsuario);
-		valido = true;
-	}
-	return valido;
-};
-
-const verificarEmail = () => {
-	let valido = false;
-	const email = emailEl.value.trim();
-	if (!obrigatorio(email)) {
-		mostrarErro(emailEl, "O email é obrigatório");
-	} else if (!emailValido(email)) {
-		mostrarErro(emailEl, "Email inválido");
-	} else {
-		mostrarSucesso(email);
-		valido = true;
-	}
-	return valido;
-};
-
-const verificarSenha = () => {
-	let valido = false;
-	const senha = senhaEl.value.trim();
-	if (!obrigatorio(senha)) {
-		mostrarErro(senhaEl, "A senha é obrigatória");
-	} else if (!verificarSenhaSegura(senha)) {
-		mostrarErro(
-			senhaEl,
-			"A senha deve conter pelo menos 8 caracteres, um número, uma letra maiúscula, uma letra minúscula e um caractere especial"
-		);
-	} else {
-		mostrarSucesso(senhaEl);
-		valido = true;
-	}
-	return valido;
-};
-
-const verificarConfirmarSenha = () => {
-	let valido = false;
-	const confirmarSenha = confirmarSenhaEl.value.trim();
-	if (!obrigatorio(confirmarSenha)) {
-		mostrarErro(confirmarSenhaEl, "A confirmação de senha é obrigatória");
-	} else if (confirmarSenha !== senhaEl.value) {
-		mostrarErro(confirmarSenhaEl, "As senhas devem ser iguais");
-	} else {
-		mostrarSucesso(confirmarSenhaEl);
-		valido = true;
-	}
-	return valido;
-};
-
-form.addEventListener("submit", (e) => {
-	e.preventDefault();
-	alert("teste");
-	let nomeUsuarioValido = verificarNomeUsuario(),
-		emailValido = verificarEmail(),
-		senhaValida = verificarSenha(),
-		confirmarSenhaValida = verificarConfirmarSenha();
-
-	let formularioValido =
-		nomeUsuarioValido && emailValido && senhaValida && confirmarSenhaValida;
-
-	if (formularioValido) {
-		//mandar para o servidor
-	}
-});
-
-butao.addEventListener("submit", (e) => {
-	switch (e.target.id) {
-		case "nomeCompleto":
-			verificarNomeUsuario();
-			break;
-		case "email":
-			verificarEmail();
-			break;
-		case "senha":
-			verificarSenha();
-			break;
-		case "confirmarSenha":
-			verificarConfirmarSenha();
-			break;
-	}
-});
+function senhaFraca(senha) {
+	return /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,}$/.test(senha);
+}
