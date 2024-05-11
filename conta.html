@@ -21,7 +21,6 @@
 			integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
 			crossorigin="anonymous" />
 		<!-- <script defer src="/scripts/script.js"></script> -->
-		<script defer src="/scripts/script.js"></script>
 	</head>
 	<body>
 		<header>
@@ -66,16 +65,19 @@
 
 		<div class="container-contas">
 			<div class="row mx-0">
-				<div class="col-md-4">
-					<img src="imgs/" alt="" />
-				</div>
+				<div class="col-md-4"></div>
 				<div class="col-md-4">
 					<div class="container-criar-conta" id="cadastroV">
 						<h1>Criar Conta</h1>
 						<h2>登録する</h2>
 						<div class="erro"></div>
-						<form action="/" method="GET" id="form">
-							<div class="form-group">
+						<form
+							action="/"
+							method="POST"
+							class="form-control-lg"
+							name="formT"
+							id="form">
+							<div class="form-group mt-4">
 								<label for="nomeCompleto">Nome Completo</label>
 								<input
 									type="text"
@@ -83,10 +85,10 @@
 									name="nomeCompleto"
 									id="nomeCompleto"
 									placeholder="Nome Completo" />
+								<div class="erroMensagem"></div>
 							</div>
-							<div class="erro"></div>
 
-							<div class="form-group">
+							<div class="form-group mt-4">
 								<label for="idade">Idade</label>
 								<input
 									type="number"
@@ -97,15 +99,16 @@
 									max="120"
 									placeholder="Idade"
 									required />
+								<div class="erro"></div>
 							</div>
 
-							<label for="sexo" class="form-label">Sexo:</label>
+							<label for="sexo" class="form-label mt-4">Sexo:</label>
 							<div class="form-check">
 								<input
 									class="form-check-input"
 									type="radio"
-									id="sexo"
-									name="sexo"
+									id="sexoM"
+									name="sexoM"
 									value="masculino" />
 								<label for="masculino" class="form-check-label"
 									>Masculino</label
@@ -115,8 +118,8 @@
 								<input
 									class="form-check-input"
 									type="radio"
-									id="sexo"
-									name="sexo"
+									id="sexoF"
+									name="sexoF"
 									value="feminino" />
 								<label for="feminino" class="form-check-label">Feminino</label>
 							</div>
@@ -124,13 +127,14 @@
 								<input
 									class="form-check-input"
 									type="radio"
-									id="sexo"
-									name="sexo"
+									id="sexoO"
+									name="sexoO"
 									value="outro" />
 								<label for="outro" class="form-check-label">Outro</label>
+								<div class="erro"></div>
 							</div>
 
-							<div class="form-group">
+							<div class="form-group mt-4">
 								<label for="endereco">Endereco</label>
 								<input
 									type="text"
@@ -139,11 +143,12 @@
 									id="endereco"
 									required
 									placeholder="Digite seu endereco" />
+								<div class="erro"></div>
 							</div>
 
 							<hr class="my-2 invisible" />
 
-							<div class="form-group">
+							<div class="form-group mt-4">
 								<label class="form-label telefone" for="telefone"
 									>Telefone</label
 								>
@@ -158,9 +163,10 @@
 									title="Invalido"
 									required
 									placeholder="31999999999" />
+								<div class="erro"></div>
 							</div>
 
-							<div class="form-group">
+							<div class="form-group mt-4">
 								<label for="email">Email</label>
 								<input
 									type="email"
@@ -170,9 +176,10 @@
 									placeholder="Email"
 									required />
 								<small></small>
+								<div class="erro"></div>
 							</div>
 
-							<div class="form-group">
+							<div class="form-group mt-4">
 								<label for="nomeUsuario">Nome de Usuário</label>
 								<input
 									type="text"
@@ -182,9 +189,10 @@
 									placeholder="Nome de Usuário"
 									required />
 								<small></small>
+								<div class="erro"></div>
 							</div>
 
-							<div class="form-group">
+							<div class="form-group mt-4">
 								<label for="senha">Senha</label>
 								<input
 									type="password"
@@ -194,20 +202,25 @@
 									required
 									minlength="8"
 									placeholder="Senha" />
-								<small></small>
+								<div class="erro"></div>
 							</div>
 
-							<div class="form-group">
+							<div class="form-group mt-4">
 								<label for="senha2">Confirme sua senha</label>
 								<input type="password" class="form-control" id="senha2"
 								name="senha2 required minlength="8" placeholder="Confirme sua
 								senha" />
-								<small></small>
+								<div class="erro" id="elo"></div>
+								<small class="erro"></small>
 							</div>
 
-							<button type="submit" class="btn btn-dark">Criar</button>
+							<button type="submit" class="btn btn-dark butaoCriar">
+								Criar
+							</button>
 							<hr class="my-4" />
-							<button onclick="alternarFormulario()" class="btn btn-dark">
+							<button
+								onclick="alternarFormulario()"
+								class="btn btn-dark butaoJaTenho">
 								Ja tenho uma conta
 							</button>
 							<div class="erro"></div>
@@ -218,8 +231,8 @@
 					<div class="container-login" id="login">
 						<h1>Fazer Login</h1>
 						<h2>ログイン</h2>
-						<form id="loginForm">
-							<div class="form-group">
+						<form action="" class="form-control-lg" id="loginForm">
+							<div class="form-group mt-4">
 								<label for="nomeUsuarioLogin">Nome de Usuário</label>
 								<input
 									type="text"
@@ -227,19 +240,26 @@
 									id="nomeUsuarioLogin"
 									name="nomeUsuarioLogin"
 									required />
+								<div class="erro"></div>
 							</div>
-							<div class="form-group">
+							<div class="form-group mt-4">
 								<label for="senha">Senha</label>
 								<input
 									type="password"
 									class="form-control"
-									id="senha"
-									name="senha"
+									id="senha3"
+									name="senha3"
 									required />
+								<div class="erro"></div>
 							</div>
-							<button type="submit" value="criarConta" class="btn btn-dark">
+							<button
+								type="submit"
+								value="logar"
+								class="btn btn-dark butaoLogar">
 								Logar
 							</button>
+							<div class="erro"></div>
+
 							<hr class="my-4" />
 							<button onclick="alternarFormulario()" class="btn btn-dark">
 								Criar nova conta
@@ -249,6 +269,7 @@
 				</div>
 			</div>
 		</div>
+		<button id="adicionar-item">adicionar item</button>
 
 		<footer class="rodape-do-site py-5 mt-5">
 			<div class="container text-light text-center">
@@ -268,10 +289,12 @@
 			src="https://code.jquery.com/jquery-3.7.1.min.js"
 			integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
 			crossorigin="anonymous"></script>
+		<!-- <script src="scripts/conta.js"></script> -->
+		<script src="scripts/form-validation.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js"></script>
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 			integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
 			crossorigin="anonymous"></script>
-		<script defer src="/scripts/script.js"></script>
 	</body>
 </html>
